@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  color: #555;
+  font-weight: 300;
+}
+
+.wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  overflow: hidden;
+}
+.player-0-panel,
+.player-1-panel {
+  width: 50%;
+  float: left;
+  height: 500px;
+  padding: 80px;
+}
+
+/*******************************
+        players
+*******************************/
+.player-name {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 80px;
+  color: #eb4d4d;
+  margin-bottom: 130px;
+}
+
+.active {
+  background-color: #f7f7f7;
+}
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #eb4d4d;
+}
+
+.player-current-box {
+  background-color: #eb4d4d;
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 30px;
+}
+
+button {
+  position: absolute;
+  width: 200px;
+  background: none;
+  border: none;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  font-size: 20px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+button:hover {
+  font-weight: 500;
+}
+
+button:focus {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+i {
+  color: #eb4d4d;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: -4px;
+  vertical-align: text-top;
+}
+
+.btn-new {
+  top: 45px;
+}
+.btn-roll {
+  top: 390px;
+}
+.btn-hold {
+  top: 450px;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
+}
+
+.winner {
+  background-color: #f7f7f7;
+}
+
+.winner .player-name {
+  color: #eb4d4d;
+}
